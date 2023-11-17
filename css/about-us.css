@@ -1,0 +1,83 @@
+.about-us{
+    background-color: rgb(24, 21, 21);
+    margin-left: 75px;
+    display: flex;
+}
+
+.about-us-red{
+    background-color: red;
+}
+
+
+.about-us-text{
+    padding: 20px 15px;
+}
+
+.about-us-title{
+    
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.about-us-content{
+    margin-bottom: 45px;
+}
+
+.about-us-img{
+    background-image: url(../img/fachada.png) ;
+    background-color: red;
+    width: 100%;
+    background-size: cover;
+    background-position: left;
+}
+.about-us-car{
+    display: flex;
+    
+}
+.ab-us-img-cont{
+    height: 150px;
+    width: 150px;
+    margin: 0 15px;
+    overflow: hidden;
+}
+.ab-us-img-cont img{ 
+    width: 150px;
+    
+}
+
+.about-us-links{
+    margin-left:15px;
+    margin-top: 30px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .about-us{
+        margin: 0;
+    }
+    .about-us-car{
+        display: block;
+    }
+    .about-us-img{
+        display: none;
+        
+    }
+    .ab-us-img-cont{
+        width: 100%;
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .ab-us-img-cont img{
+       width: 100%;
+       display: none;
+    }
+
+    .ab-us-img-cont:first-child{
+        display: block;
+    }
+
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/proto_form.css" />
+    <title>Ricón Ganadero</title>
+  </head>
+  <body>
+    <!-- Botón volver -->
+    <div class="wrap">
+    <a class="button" href='index.html' style="padding: 15px; text-decoration: none;">Volver</a>
+    </div>
+        <!--  -->
+    <div class="login-page">
+      <div class="form">
+        <form id="reservacion-form" class="login-form">
+        <input type="hidden" name="id">
+        <h4>Propetario de reservacion</h4>
+        <input type="text" class="form-control mb-3" name="name" required >
+        <h4>Correo electronico</h4>
+        <input type="email" class="form-control mb-3" name="email" required >
+        <h4>Descripción</h4>
+        <input type="text" class="form-control mb-3" name="description" required>
+          <button type="submit" name="register" id="enviar">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.getElementById('reservacion-form').addEventListener('submit', function (event) {
+      event.preventDefault(); // Evita el envío normal del formulario
+  
+      // Serializa los datos del formulario a un objeto JSON
+      const formData = new FormData(this);
+      const formDataObject = {};
+      formData.forEach((value, key) => {
+        formDataObject[key] = value;
+      });
+  
+      // Convierte el objeto JSON a una cadena JSON
+      const jsonData = JSON.stringify(formDataObject);
+  
+      // Realiza la solicitud POST con los datos JSON
+      fetch('http://localhost:3000/reservaciones', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: jsonData,
+      })
+        .then((response) => {
+          if (response.status === 201) {
+            // La solicitud se completó con éxito
+            alert('Registro exitoso');
+            window.location.href = 'index.html'; // Redirige a index.html
+          } else {
+            // Hubo un error en la solicitud
+            console.error('Error al crear la reservación');
+            alert('Error al crear la reservación');
+          }
+        })
+        .catch((error) => {
+          console.error('Error en la solicitud:', error);
+          alert('Error en la solicitud');
+        });
+    });
+  </script>
+  
+  
+</html>

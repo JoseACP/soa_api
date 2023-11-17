@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="proto_form.css" />
+    <title>Formulario Prototipos</title>
+  </head>
+  <body>
+    <!-- Botón volver -->
+    <div class="wrap">
+      <a class="button" href='tacos.php' style="padding: 15px; text-decoration: none;">Volver</a>
+    </div>
+    
+    <div class="login-page">
+      <div class="form">
+        <form id="updateForm">
+          <input type="hidden" name="id" value="<?php echo $row['id']  ?>">
+          
+          <h4>Nombre</h4>
+          <input type="text" class="form-control mb-3" name="name" value="<?php echo $row['nombre']  ?>">
+          
+          <h4>Descripción</h4>
+          <input type="text" class="form-control mb-3" name="description" value="<?php echo $row['descripcion']  ?>">
+          
+          <h4>Precio</h4>
+          <input type="text" class="form-control mb-3" name="cost" placeholder="Precio" value="<?php echo $row['precio']  ?>">
+          
+          <button type="button" onclick="updateCard()">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      async function updateCard() {
+        const form = document.getElementById('updateForm');
+        const formData = new FormData(form);
+        const cardId = formData.get('id');
+        
+        try {
+          const response = await fetch(`http://localhost:3000/cards/${cardId}`, {
+            method: 'PATCH', // Puedes cambiar a 'PUT' según tus necesidades
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(Object.fromEntries(formData)),
+          });
+
+          if (response.ok) {
+            const result = await response.json();
+            alert(result.message);
+          } else {
+            const error = await response.json();
+            alert(`Error: ${error.error}`);
+          }
+        } catch (error) {
+          console.error('Error al enviar la solicitud:', error);
+        }
+      }
+    </script>
+  </body>
+</html>

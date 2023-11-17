@@ -1,0 +1,39 @@
+.display-cortes{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	grid-auto-rows: auto;
+	
+}
+
+.corte-img{
+	display: flex;
+	justify-content: center;
+}
+
+.corte-img img{
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.corte p{
+	text-align: center;
+
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+	.display-cortes{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.corte-img img{
+		height: 125px;
+	}
+
+}

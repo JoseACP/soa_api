@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-image: url("assets/images/img-07.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* No Scrollbar */
+    overflow: hidden;
+}
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background: url(https://www.xtrafondos.com/wallpapers/montanas-con-nieve-en-el-bosque-3934.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    /*bbackground-image: url("assets/fondo.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+    ackground: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(191,0,0,1) 96%);*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* No Scrollbar */
+    overflow: hidden;
+}
+
+.form-box {
+    width: 300px;
+    padding: 40px;
+    background: #0c0000b7;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.form-title {
+    color: rgb(241, 241, 241);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.form-box input[type="email"],
+.form-box input[type="password"],
+.form-box button[type="submit"] {
+    border: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #1099e7e7;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: rgb(250, 244, 244);
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.form-box input[type="text"]:focus,
+.form-box input[type="password"]:focus {
+    width: 280px;
+    border-color: #ffffff;
+}
+
+.form-box input[type="submit"] {
+    border: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background: #32c40dc9;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #32c40dc9;
+    padding: 14px 40px;
+    outline: none;
+    color: rgb(255, 253, 253);
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.form-box input[type="submit"]:hover {
+    background: none;
+}
+
+.form-box p {
+    color: rgb(250, 244, 244);
+}
+
+.form-box button {
+    border: 0;
+    background: #ffffff;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #eaeaeb;
+    padding: 14px 40px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+input[type=text], input[type=password]{
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    width: 370px;
+}
+
+
+.center{
+    text-align: center;
+}
+
+.opcion{
+    padding: 5px 0;
+}
+
+.barra{
+    background-color:rgb(152, 196, 236);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.seleccionado{
+    background-color: rgb(33, 90, 143);
+    border-radius: 4px;
+    color: white;
+    padding: 10px;
+}
+
+#menu{
+    background-color: #eee;
+    padding: 10px;
+}
+#menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+}
+#menu ul li{
+    display: inline;
+}
+#menu ul li a{
+    color: #1E69E3;
+    text-decoration: none;
+}
+#menu ul li a:hover{
+    color: rgb(227, 109, 30);
+    text-decoration: none;
+}
+.cerrar-sesion{
+    float: right;
+}

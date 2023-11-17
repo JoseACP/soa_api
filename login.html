@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rincón Ganadero</title>
+    <script type="module" src="js/auth.js"></script>
+
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <form id="loginForm" action="" method="POST" class="form-box">
+     
+        <h1 class="form-title">Iniciar sesión</h1>
+        <br>
+        <p>Email: <br>
+        <input type="email" name="email" id="email" placeholder="a"></p>
+        <p>Contraseña: <br>
+        <input type="password" name="password"  id="password" placeholder="a"></p>
+        <p class="center"><input type="submit" value="Login Now"></p>
+    </form>
+    <script type="module">
+    import { iniciarSesion } from "./js/auth.js";
+
+    const loginForm = document.getElementById('loginForm');
+
+    loginForm.addEventListener('submit', async function (event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      await iniciarSesion(email, password);
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+

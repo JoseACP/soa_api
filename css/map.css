@@ -1,0 +1,38 @@
+.map{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    padding: 20px;
+    
+}
+
+.map-main{
+    display: none;
+}
+.map-desc{
+    /* padding: 20px; */
+    text-align: center;
+}
+.map-desc-body{
+    font-size: 25px;
+    
+}
+
+.map-icon{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    padding-top: 150px;
+}
+.map-icon img{
+    width: 100px;
+    height: 100px;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .map-main{
+        display: block;
+    }
+}

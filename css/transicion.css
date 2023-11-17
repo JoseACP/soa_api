@@ -1,0 +1,27 @@
+.transicion{
+	background: rgb(168,0,0);
+background: linear-gradient(0deg, rgba(168,0,0,1) 0%, rgba(255,0,0,1) 100%);
+
+}
+.transicion div{
+	color: black;
+	text-align: center;
+	padding: 15px;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.transicion-sm-links{
+	display: flex;
+	justify-content: center;
+}
+
+.transicion-sm{
+	background-color: black;
+	border-radius:50% ;
+}
+
+.transicion-sm a{
+	width: 10px;
+	height: 10px;
+}

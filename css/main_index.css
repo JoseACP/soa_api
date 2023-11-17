@@ -1,0 +1,14 @@
+*{
+	color: white;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	background-color: black;
+}
+a{
+	text-decoration: none;
+}
